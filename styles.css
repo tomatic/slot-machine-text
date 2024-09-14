@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+.slot-machine {
+  width: 200px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+}
+
+.words {
+  display: flex;
+  flex-direction: column;
+  animation: scroll 5s infinite cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.word {
+  font-size: 30px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Continuous scrolling animation */
+@keyframes scroll {
+  0% {
+      transform: translate3d(0,0,0);
+  }
+
+  33% {
+      transform: translate3d(0,-25%,0);
+  }  
+
+  66% {
+      transform: translate3d(0,-50%,0);
+  }  
+
+  99% {
+      transform: translate3d(0,-75%,0);
+  }
+
+  100% {
+      transform: translate3d(0,-75%,0);
+  }  
+
+  
+}
